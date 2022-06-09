@@ -131,13 +131,12 @@ module.exports = data => {
   ${data.description}\n
 
   ## table of Contents\n
-
-    * [installation instructions](#installation)\n
-    * [usage](#usage)\n
-    * [contribution guidlines](#contribution)\n
-    * [test instructions](#test)\n
-    * [license](#license)\n
-    * [questions](#questions)\n
+  *  [installation instructions](#installation-instructions)\n
+  *  [usage](#usage)\n
+  *  [contribution guidelines](#contribution-guidelines)\n
+  *  [test instructions](#test-instructions)\n
+  *  [license](#license)\n
+  *  [questions](#questions)\n
 
   ## installation \n
   ${data.install}\n
@@ -156,8 +155,10 @@ module.exports = data => {
   ${renderLicenseSection(data)}\n
 
   ## questions
-  [![github svg](./ICONS/github.svg)](https://github.com/${data.github})\n
+ **copied here is a link to my github page**\n
+ (https://github.com/${data.github})\n
 
-  if you have any questions, please email me at ${data.email}\n
+  if you have any questions, please email me at ${data.email}:purple_heart:\n
 `;
 }
+
