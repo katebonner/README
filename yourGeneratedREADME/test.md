@@ -66,5 +66,5 @@
  (https://github.com/katebonner)
 
 
-  if you have any questions, please email me at katebonner277@gmail.com:purple_heart:
+  if you have any questions, please email me at katebonner277@gmail.com :purple_heart:
 

@@ -70,7 +70,7 @@ function renderLicenseSection(data) {
         you may not use this file except in compliance with the License.
         You may obtain a copy of the License at
       
-          http://www.apache.org/licenses/LICENSE-2.0
+        http://www.apache.org/licenses/LICENSE-2.0
       
         Unless required by applicable law or agreed to in writing, software
         distributed under the License is distributed on an "AS IS" BASIS,
@@ -130,13 +130,13 @@ module.exports = data => {
   ## description\n
   ${data.description}\n
 
-  ## table of Contents\n
-  *  [installation instructions](#installation-instructions)\n
-  *  [usage](#usage)\n
-  *  [contribution guidelines](#contribution-guidelines)\n
-  *  [test instructions](#test-instructions)\n
-  *  [license](#license)\n
-  *  [questions](#questions)\n
+  ## table of Contents
+  *  [installation instructions](#installation-instructions)
+  *  [usage](#usage)
+  *  [contribution guidelines](#contribution-guidelines)
+  *  [test instructions](#test-instructions)
+  *  [license](#license)
+  *  [questions](#questions)
 
   ## installation \n
   ${data.install}\n
