@@ -8,7 +8,49 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: "input",
-            name: "project-title",
+            name: "name",
+            message: "what is your name ?",
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                }
+                else {
+                    console.log("please enter your name");
+                    return false;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "what is your github username ?",
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                }
+                else {
+                    console.log("please enter your github username");
+                    return false;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "what is your email ?",
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                }
+                else {
+                    console.log("please enter your email");
+                    return false;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "title",
             message: "what is the title of your project ?",
             validate: nameInput => {
                 if (nameInput) {
@@ -35,7 +77,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "install-instructions",
+            name: "install",
             message: "what are the installation instructions for this project ?",
             validate: instructionInput => {
                 if (instructionInput){
@@ -63,7 +105,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "contribution-guidelines",
+            name: "contribution",
             message: "what are the contribution guidelines of this project ?",
             validate: contributionInput => {
                 if (contributionInput){
@@ -77,7 +119,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "test-instructions",
+            name: "test",
             message: "what are the test instructions for this project ?",
             validate: testInput => {
                 if (testInput){
@@ -92,20 +134,37 @@ const questions = () => {
         {
             type: "list",
             name: "license",
-            choices: [ "Apache License 2.0", 'BSD 3-Clause "New" or "Revised" license', 'BSD 2-Clause "Simplified" or "FreeBSD" license', "GNU General Public License (GPL)", 'GNU Library or "Lesser" General Public License (LGPL)', "MIT license", "Mozilla Public License 2.0", "Common Development and Distribution License", "Eclipse Public License version 2.0"]
+            choices: [ "Apache License 2.0", "BSD 3-Clause License", "BSD 2-Clause License", "ISC License (ISC)", "The MIT License"]
+        },
+        {
+            type: "input",
+            name: "year",
+            message: "what is the copyright year ?",
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                }
+                else {
+                    console.log("please enter the copyright year");
+                    return false;
+                }
+            }
         }
     ])
-
 }
 
-questions()
-    .then(generateMarkdown)
+//FUNCTION TO INITIALIZE APP
+function init () {
+    questions()
+    // CREATE A FUNCTION TO WRITE README FILE
+    .then((projectData) => {
+        const markdownData = generateMarkdown(projectData);
+        fs.writeFile(`./README/yourGeneratedREADME/${projectData.title}.md`, markdownData, (err) => {
+            err ? console.error(err) : console.log('readme created');
+        })
+    })
+}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+// FUCNTION CALL TO INITIALIZE APP
 init();
+
