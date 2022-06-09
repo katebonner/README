@@ -54,9 +54,7 @@ limitations under the License.
 
 
   ## questions
- **copied here is a link to my github page**
-
- (https://github.com/katebonner)
+ [CLICK HERE to view my github page](https://github.com/katebonner)
 
 
   if you have any questions, please email me at katebonner277@gmail.com:purple_heart:

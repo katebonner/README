@@ -160,8 +160,7 @@ module.exports = data => {
   ${renderLicenseSection(data)}\n
 
   ## questions
- **copied here is a link to my github page**\n
- (https://github.com/${data.github})\n
+ [CLICK HERE to view my github page](https://github.com/${data.github})\n
 
   if you have any questions, please email me at ${data.email}:purple_heart:\n
 `;
