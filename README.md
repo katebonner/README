@@ -20,7 +20,7 @@ This project leverages node.js to allow an end user to generate a README markdow
 
 To install this project, navigate to your comand line console (for simplicity we will assume you are using terminal) and:
 
-```
+
 Clone this repository.
 ```md
 git clone git@github.com:katebonner/README.git
