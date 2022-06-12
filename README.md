@@ -4,7 +4,8 @@
 
 This project leverages node.js to allow an end user to generate a README markdown file from the command line.
 
-![demo](./README-VIDEO/demo.mov)
+[![demo](./READMECONTENT/demoIMG.png)](./READMECONTENT/demo.mov)
+
 
 
 
@@ -37,7 +38,7 @@ if it has not been installed, install it.
 ```md
 npm install inquirer
 ```
-```
+
 
 ## Usage
 
