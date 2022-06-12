@@ -159,7 +159,7 @@ function init () {
     // CREATE A FUNCTION TO WRITE README FILE
     .then((projectData) => {
         const markdownData = generateMarkdown(projectData);
-        fs.writeFile(`./README/yourGeneratedREADME/${projectData.title}.md`, markdownData, (err) => {
+        fs.writeFile(`./yourGeneratedREADME/${projectData.title}.md`, markdownData, (err) => {
             err ? console.error(err) : console.log('readme created');
         })
     })
